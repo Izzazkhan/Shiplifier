@@ -51,9 +51,13 @@ function App() {
           )
         })}
       </div>
-      <button className="reset-button" onClick={handleReset}>
-        Reset Grid
-      </button>
+      {
+        activeBoxes.every(value => value === false) ?
+        <h2>Click on the boxes</h2> :
+        <button className="reset-button" onClick={handleReset}>
+          Reset Grid
+        </button>
+      }
     </div>
   )
 }
